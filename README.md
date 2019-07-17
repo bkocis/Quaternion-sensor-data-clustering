@@ -14,4 +14,4 @@ Demo of the problem:
 [![Watch the video](https://img.youtube.com/vi/qMMOt3G3qhg/maxresdefault.jpg)](https://youtu.be/qMMOt3G3qhg)
 
 
-<img src="https://img.youtube.com/vi/qMMOt3G3qhg/maxresdefault.jpg" width="50" height="100">(https://youtu.be/qMMOt3G3qhg)
+[<img src="https://img.youtube.com/vi/qMMOt3G3qhg/maxresdefault.jpg" width="50" height="100">](https://youtu.be/qMMOt3G3qhg)
