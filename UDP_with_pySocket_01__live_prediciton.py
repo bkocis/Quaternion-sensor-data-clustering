@@ -12,7 +12,7 @@ https://docs.python.org/3/howto/sockets.html
 https://stackoverflow.com/questions/18743962/python-send-udp-packet
 
 
-good advice on the case of blocking sockets / socket read
+case of blocking sockets / socket read
 
 https://stackoverflow.com/questions/2719017/how-to-set-timeout-on-pythons-socket-recv-method
 
@@ -21,8 +21,7 @@ https://stackoverflow.com/questions/2719017/how-to-set-timeout-on-pythons-socket
 
 
 def read_data_stream(knn):
-	#IP = "192.168.7.36"	# test in DA_stream
-	IP = "192.168.0.113"	# on demolink
+	IP = "XX.XX.XX.XX"
 	port = 8000 #2390
 
 	while time.time() <time.time()+1:    
@@ -52,10 +51,6 @@ def read_data_stream(knn):
 
 if __name__=="__main__":
 	# read in data and add label column
-#	df_LL = pa.read_csv('./data_labeled/day_3/test_data_LL_2_.txt', sep=' ')
-#	df_LR = pa.read_csv('./data_labeled/day_3/test_data_LR_2_.txt', sep=' ')
-#	df_UL = pa.read_csv('./data_labeled/day_3/test_data_UL_2_.txt', sep=' ')
-#	df_UR = pa.read_csv('./data_labeled/day_3/test_data_UR_2_.txt', sep=' ')
 	df_LL = pa.read_csv('test_data_LL_2_.txt', sep=' ')
 	df_LR = pa.read_csv('test_data_LR_2_.txt', sep=' ')
 	df_UL = pa.read_csv('test_data_UL_2_.txt', sep=' ')
@@ -86,36 +81,3 @@ if __name__=="__main__":
 
 
 ######
-"""
-references: 
-https://pythontic.com/modules/socket/udp-client-server-example
-
-
-localIP     = "127.0.0.1"
-localPort   = 20001
-bufferSize  = 1024
-
-msgFromServer       = "Hello UDP Client"
-bytesToSend         = str.encode(msgFromServer)
-
-# Create a datagram socket
-UDPServerSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
-
-# Bind to address and ip
-UDPServerSocket.bind((localIP, localPort))
-
-print("UDP server up and listening")
-# Listen for incoming datagrams
-while(True):
-    bytesAddressPair = UDPServerSocket.recvfrom(bufferSize)
-    message = bytesAddressPair[0]
-    address = bytesAddressPair[1]
-    clientMsg = "Message from Client:{}".format(message)
-    clientIP  = "Client IP Address:{}".format(address)
-    print(clientMsg)
-    print(clientIP)
-    # Sending a reply to client
-    UDPServerSocket.sendto(bytesToSend, address)
-
-
-"""
