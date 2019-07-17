@@ -8,42 +8,15 @@ https://docs.python.org/3/howto/sockets.html
 https://stackoverflow.com/questions/18743962/python-send-udp-packet
 
 
-good advice on the case of blocking sockets / socket read
+advice on the case of blocking sockets / socket read
 
 https://stackoverflow.com/questions/2719017/how-to-set-timeout-on-pythons-socket-recv-method
 
 
 """
 
-
-def test_1():
-	IP = "192.168.7.36"  # ip of the Feather M0 when connected to DA_stream
-	UDP_port = 2390
-
-	message = 'jello'
-
-	sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
-	sock.sendto(bytes(message, "utf-8"), (UDP_IP, UDP_port))
-
-	# sending messages to the Arduino via UDP
-	while (True):
-		sock.sendto(bytes('kkkk',"utf-8"), (UDP_IP, UDP_port))
-		b = sock.recvfrom(1024)
-		me = b[0]
-		addr = b[1]
-		clm = "Message from Client:{}".format(me)
-		clip = "Client IP address: {}".format(addr)
-		print(clm)
-		print(clip)
-		time.sleep(0.05)
-
-
-####
-
 def test_2():
-	#IP = "192.168.7.36"	# test in DA_stream
-	IP = "192.168.0.113"	# on demolink
+	IP = "XX.XX.XX.XX"	
 	port = 8000 #2390
 
 	#sock.bind(('',port))
