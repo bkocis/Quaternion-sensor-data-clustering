@@ -1,4 +1,4 @@
-Demonstration of the data labeling of the sensor data from the BNO055.
+Demonstration of sensor data labeling from a giro module BNO055.
 ----------------------------------------------------------------------
 
 
