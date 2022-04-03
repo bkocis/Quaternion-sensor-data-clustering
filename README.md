@@ -1,9 +1,9 @@
-Demonstration of sensor data labeling from a giro module BNO055.
+Demonstration of data labeling from a [9-axis absolute orientation sensor BNO055](https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor).
 ----------------------------------------------------------------------
 
 
-Ardunio board
-BNO055 sensor 
+- Ardunio board
+- [BNO055 sensor](https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor) 
 
 Python code uses sklearn KNN algorithm to cluster the datapoints and for the class label inference of new datapoints.
 
